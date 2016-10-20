@@ -1,0 +1,64 @@
+{
+  "welcomeFile": "/webapp/index.html",
+  "authenticationMethod": "none",
+  "routes": [
+    {
+      "path": "/sap/opu/odata",
+      "target": {
+        "type": "destination",
+        "name": "ERP",
+        "entryPath": "/sap/opu/odata"
+      },
+      "description": "Codan Dev EP/Gateway"
+    },
+    {
+      "path": "/sap/bc/ui5_ui5",
+      "target": {
+      	"type": "destination",
+      	"name": "ERP",
+      	"entryPath": "/sap/bc/ui5_ui5"
+      }
+    },
+    {
+    	"path": "/sap/public/bc",
+    	"target": {
+    		"type": "destination",
+    		"name": "ERP",
+    		"entryPath": "/sap/public/bc"
+    	}
+    },
+    {
+    	"path": "/sap/bc/ui2",
+    	"target": {
+    		"type": "destination",
+    		"name": "ERP",
+    		"entryPath": "/sap/bc/ui2"
+    	}
+    },
+    {
+    	"path": "flp",
+    	"target": {
+    		"type": "destination",
+    		"name": "ERP",
+    		"entryPath": "/sap/bc/ui5_ui5/ui2/ushell/shells/abap/"
+    	}
+    }
+  ],
+  "sendWelcomeFileRedirect": true,
+  "cacheControl": [
+    {
+      "directive": "private",
+      "maxAge": 0,
+      "path": "**.html"
+    },
+    {
+      "directive": "private",
+      "maxAge": 0,
+      "path": "sap-ui-cachebuster-info.json"
+    },
+    {
+      "directive": "public",
+      "maxAge": 31536000
+    }
+  ]
+}
